@@ -1,0 +1,550 @@
+label,value
+"ABE - Allentown, Pennsylvania, USA (United States)",ABE
+"ABJ - Abidjan, Ivory Coast (Ivory Coast)",ABJ
+"ABQ - Albuquerque, New Mexico, USA (United States)",ABQ
+"ABR - Aberdeen, South Dakota, USA (United States)",ABR
+"ABV - Abuja, Nigeria (Nigeria)",ABV
+"ABY - Albany, Georgia, USA (United States)",ABY
+"ABZ - Aberdeen, Scotland, (U.K.) (United Kingdom)",ABZ
+"ACA - Acapulco, Mexico (Mexico)",ACA
+"ACC - Accra, Ghana (Ghana)",ACC
+"ACK - Nantucket, Massachusetts, USA (United States)",ACK
+"ACV - Eureka/Arcata, California, USA (United States)",ACV
+"ADD - Addis Ababa, Ethiopia (Ethiopia)",ADD
+"AEX - Alexandria, Louisiana, USA (United States)",AEX
+"AGA - Agadir, Morocco (Morocco)",AGA
+"AGP - Malaga, Spain (Spain)",AGP
+"AGS - Augusta, Georgia, USA (United States)",AGS
+"AGU - Aguascalientes, Mexico (Mexico)",AGU
+"AKL - Auckland, New Zealand (New Zealand)",AKL
+"ALB - Albany, New York, USA (United States)",ALB
+"ALO - Waterloo, Iowa, USA (United States)",ALO
+"AMA - Amarillo, Texas, USA (United States)",AMA
+"AMM - Amman, Jordan (Jordan)",AMM
+"AMS - Amsterdam, Netherlands (Netherlands)",AMS
+"ANC - Anchorage, Alaska, USA (United States)",ANC
+"ANU - Antigua, West Indies (Antigua And Barbuda)",ANU
+"AOI - Ancona, Italy (Italy)",AOI
+"AOJ - Aomori, Japan (Japan)",AOJ
+"APN - Alpena, Michigan, USA (United States)",APN
+"ARN - Stockholm, Sweden (Sweden)",ARN
+"ASE - Aspen, Colorado, USA (United States)",ASE
+"ATH - Athens, Greece (Greece)",ATH
+"ATL - Atlanta, Georgia, USA (United States)",ATL
+"ATW - Appleton, Wisconsin, USA (United States)",ATW
+"ATY - Watertown, South Dakota, USA (United States)",ATY
+"AUA - Aruba, Aruba (Aruba)",AUA
+"AUH - Abu Dhabi, United Arab Emirates (United Arab Emirates)",AUH
+"AUS - Austin, Texas, USA (United States)",AUS
+"AVL - Asheville, North Carolina, USA (United States)",AVL
+"AVP - Scranton/Wilkes-Barre, Pa, USA (United States)",AVP
+"AXT - Akita, Japan (Japan)",AXT
+"AZO - Kalamazoo, Michigan, USA (United States)",AZO
+"BCN - Barcelona, Spain (Spain)",BCN
+"BDA - Bermuda, Atlantic Ocean (Bermuda-Uk)",BDA
+"BDL - Hartford, Ct/Springfield, Ma, U (United States)",BDL
+"BDS - Brindisi, Italy (Italy)",BDS
+"BES - Brest, France (France)",BES
+"BGI - Bridgetown, Barbados (Barbados)",BGI
+"BGM - Binghamton, New York, USA (United States)",BGM
+"BGO - Bergen, Norway (Norway)",BGO
+"BGR - Bangor, Maine, USA (United States)",BGR
+"BHM - Birmingham, Alabama, USA (United States)",BHM
+"BHX - Birmingham, England, (U.K.) (United Kingdom)",BHX
+"BIL - Billings, Montana, USA (United States)",BIL
+"BIO - Bilbao, Spain (Spain)",BIO
+"BIQ - Biarritz, France (France)",BIQ
+"BIS - Bismarck, North Dakota, USA (United States)",BIS
+"BJI - Bemidji, Minnesota, USA (United States)",BJI
+"BJX - Leon-Guanajuato, Mexico (Mexico)",BJX
+"BKK - Bangkok, Thailand (Thailand)",BKK
+"BKO - Bamako, Mali (Mali)",BKO
+"BLL - Billund, Denmark (Denmark)",BLL
+"BLQ - Bologna, Italy (Italy)",BLQ
+"BLR - Bengaluru, India (India)",BLR
+"BMI - Bloomington, Illinois, USA (United States)",BMI
+"BNA - Nashville, Tennessee, USA (United States)",BNA
+"BOD - Bordeaux, France (France)",BOD
+"BOG - Bogota, Colombia (Colombia)",BOG
+"BOI - Boise, Idaho, USA (United States)",BOI
+"BOM - Bombay, India (India)",BOM
+"BON - Bonaire, Neth. Antilles (Netherlands Antilles-Netherlands)",BON
+"BOS - Boston, Massachusetts, USA (United States)",BOS
+"BQK - St. Simons Island, Georgia, USA (United States)",BQK
+"BQN - Aguadilla, Puerto Rico (United States)",BQN
+"BRD - Brainerd, Minnesota, USA (United States)",BRD
+"BRE - Bremen, Germany (Germany)",BRE
+"BRI - Bari, Italy (Italy)",BRI
+"BRO - Brownsville, Texas, USA (United States)",BRO
+"BRU - Brussels, Belgium (Belgium)",BRU
+"BSB - Brasilia, Brazil (Brazil)",BSB
+"BSL - Basel, Switzerland (Switzerland)",BSL
+"BTM - Butte, Montana, USA (United States)",BTM
+"BTR - Baton Rouge, Louisiana, USA (United States)",BTR
+"BTS - Bratislava, Slovakia (Slovakia)",BTS
+"BTV - Burlington, Vermont, USA (United States)",BTV
+"BUD - Budapest, Hungary (Hungary)",BUD
+"BUF - Buffalo, New York, USA (United States)",BUF
+"BUR - Burbank, California, USA (United States)",BUR
+"BWI - Baltimore, Maryland, USA (United States)",BWI
+"BZE - Belize City, Belize (Belize)",BZE
+"BZN - Bozeman, Montana, USA (United States)",BZN
+"BZV - Brazzaville, Peop. Rep. Of Cong (Congo)",BZV
+"CAE - Columbia, South Carolina, USA (United States)",CAE
+"CAI - Cairo, Arab Rep. Of Egypt (Egypt)",CAI
+"CAK - Akron/Canton, Ohio, USA (United States)",CAK
+"CAN - Guangzhou, China (China)",CAN
+"CCS - Caracas, Venezuela (Venezuela)",CCS
+"CDC - Cedar City, Utah, USA (United States)",CDC
+"CDG - Paris, France (France)",CDG
+"CFE - Clermont-Ferrand, France (France)",CFE
+"CFR - Caen, France (France)",CFR
+"CHA - Chattanooga, Tennessee, USA (United States)",CHA
+"CHO - Charlottesville, Virginia, USA (United States)",CHO
+"CHS - Charleston, South Carolina, USA (United States)",CHS
+"CID - Cedar Rapids/Iowa City, Iowa, U (United States)",CID
+"CIU - Sault Ste. Marie, Michigan, USA (United States)",CIU
+"CJS - Ciudad Juarez, Mexico (Mexico)",CJS
+"CKY - Conakry, Guinea (Guinea)",CKY
+"CLE - Cleveland, Ohio, USA (United States)",CLE
+"CLT - Charlotte, North Carolina, USA (United States)",CLT
+"CMH - Columbus, Ohio, USA (United States)",CMH
+"CMI - Champaign, Illinois, USA (United States)",CMI
+"CMN - Casablanca, Morocco (Morocco)",CMN
+"CMX - Hancock, Michigan, USA (United States)",CMX
+"COD - Lovell/Cody, Wyoming, USA (United States)",COD
+"COO - Cotonou, Benin (Benin)",COO
+"COS - Colorado Springs, Colorado, USA (United States)",COS
+"COU - Columbia, Missouri, USA (United States)",COU
+"CPH - Copenhagen, Denmark (Denmark)",CPH
+"CPR - Casper, Wyoming, USA (United States)",CPR
+"CPT - Cape Town, South Africa (Republic Of South Africa And Transkei)",CPT
+"CRP - Corpus Christi, Texas, USA (United States)",CRP
+"CRW - Charleston, West Virginia, USA (United States)",CRW
+"CSG - Columbus, Georgia, USA (United States)",CSG
+"CSX - Changsha, China (China)",CSX
+"CTA - Catania, Italy (Italy)",CTA
+"CTS - Sapporo, Japan (Japan)",CTS
+"CUL - Culiacan, Mexico (Mexico)",CUL
+"CUN - Cancun, Mexico (Mexico)",CUN
+"CUR - Curacao, Neth. Antilles (Netherlands Antilles-Netherlands)",CUR
+"CUU - Chihuahua, Mexico (Mexico)",CUU
+"CVG - Cincinnati, Ohio, USA (United States)",CVG
+"CWA - WaUSAu, Wisconsin, USA (United States)",CWA
+"CWL - Cardiff, Wales, (U.K.) (United Kingdom)",CWL
+"CZM - Cozumel, Mexico (Mexico)",CZM
+"DAB - Daytona Beach, Florida, USA (United States)",DAB
+"DAL - Dallas/Ft.Worth, Texas, USA (United States)",DAL
+"DAR - Dar Es Salaam, Tanzania (Tanzania)",DAR
+"DAY - Dayton, Ohio, USA (United States)",DAY
+"DBQ - Dubuque, Iowa, USA (United States)",DBQ
+"DCA - Washington, D.C., USA (United States)",DCA
+"DEL - Delhi, India (India)",DEL
+"DEN - Denver, Colorado, USA (United States)",DEN
+"DFW - Dallas/Ft.Worth, Texas, USA (United States)",DFW
+"DHN - Dothan, Alabama, USA (United States)",DHN
+"DLA - Douala, Cameroon (Cameroons)",DLA
+"DLC - Dalian, China (China)",DLC
+"DLH - Duluth, Minnesota, USA (United States)",DLH
+"DMM - Dammam, Saudi Arabia (Saudi Arabia)",DMM
+"DOH - Doha, Qatar (Qatar)",DOH
+"DSM - Des Moines, Iowa, USA (United States)",DSM
+"​DSS - ​Dakar, Senegal (​Senegal)",​DSS
+"DTW - Detroit, Michigan, USA (United States)",DTW
+"DUB - Dublin, Republic Of Ireland (Ireland)",DUB
+"DUS - Dusseldorf, Germany (Germany)",DUS
+"DVL - Devils Lake, North Dakota, USA (United States)",DVL
+"DXB - Dubai, U. A. Emirates (United Arab Emirates)",DXB
+"EAU - Eau Claire, Wisconsin, USA (United States)",EAU
+"EBB - Entebbe/Kampala, Uganda (Uganda)",EBB
+"ECP - Panama City, Florida (United States)",ECP
+ - New - Northwest Florida Beaches International Airport (),
+"EDI - Edinburgh, Scotland, (U.K.) (United Kingdom)",EDI
+"EGE - Eagle, Colorado, USA (United States)",EGE
+"EKO - Elko, Nevada, USA (United States)",EKO
+"ELM - Elmira, New York, USA (United States)",ELM
+"ELP - El Paso, Texas, USA (United States)",ELP
+"ERI - Erie, Pennsylvania, USA (United States)",ERI
+"ESC - Escanaba, Michigan, USA (United States)",ESC
+"EUG - Eugene, Oregon, USA (United States)",EUG
+"EVV - Evansville, Indiana, USA (United States)",EVV
+"EWN - New Bern, North Carolina, USA (United States)",EWN
+"EWR - Newark, New Jersey, USA (United States)",EWR
+"EYW - Key West, Florida, USA (United States)",EYW
+"EZE - Buenos Aires, Arg. (Argentina)",EZE
+"FAI - Fairbanks, Alaska, USA (United States)",FAI
+"FAR - Fargo, North Dakota, USA (United States)",FAR
+"FAT - Fresno, California, USA (United States)",FAT
+"FAY - Fayetteville, North Carolina, U (United States)",FAY
+"FCA - Kalispell, Montana, USA (United States)",FCA
+"FCO - Rome, Italy. (Italy)",FCO
+"FLG - Flagstaff, Arizona, USA (United States)",FLG
+"FLL - Ft. Lauderdale, Florida, USA (United States)",FLL
+"FLO - Florence, South Carolina, USA (United States)",FLO
+"FLR - Florence, Italy (Italy)",FLR
+"FMO - Muenster, Germany (Germany)",FMO
+"FNT - Flint, Michigan, USA (United States)",FNT
+"FOD - Ft. Dodge, Iowa, USA (United States)",FOD
+"FOR - Fortaleza, Ceara, Brazil (Brazil)",FOR
+"FPO - Freeport, Bahamas (Bahamas)",FPO
+"FRA - Frankfurt, Germany (Germany)",FRA
+"FSD - Sioux Falls, South Dakota, USA (United States)",FSD
+"FSM - Ft. Smith, Arkansas, USA (United States)",FSM
+"FUK - Fukuoka, Japan (Japan)",FUK
+"FWA - Ft. Wayne, Indiana, USA (United States)",FWA
+"GCC - Gillette, Wyoming, USA (United States)",GCC
+"GCM - Grand Cayman, Cayman Islands (Cayman)",GCM
+"GDL - Guadalajara, Mexico (Mexico)",GDL
+"GEG - Spokane, Washington, USA (United States)",GEG
+"GEO - Georgetown, Guyana (Guyana)",GEO
+"GFK - Grand Forks, North Dakota, USA (United States)",GFK
+"GIG - Rio De Janeiro, Brazil (Brazil)",GIG
+"GJT - Grand Junction, Colorado, USA (United States)",GJT
+"GLA - Glasgow, Scotland, (U.K.) (United Kingdom)",GLA
+"GLH - Greenville, Mississippi, USA (United States)",GLH
+"GNV - Gainesville, Florida, USA (United States)",GNV
+"GOA - Genoa, Italy (Italy)",GOA
+"GOT - Gothenburg, Sweden (Sweden)",GOT
+"GPT - Gulfport/Biloxi, Mississippi, U (United States)",GPT
+"GRB - Green Bay, Wisconsin, USA (United States)",GRB
+"GRK - Killeen, Texas, USA (United States)",GRK
+"GRR - Grand Rapids, Michigan, USA (United States)",GRR
+"GRU - Sao Paulo, Brazil (Brazil)",GRU
+"GSO - Greensboro/High Point, Nc, USA (United States)",GSO
+"GSP - Greenville/Spartanburg, Sc, USA (United States)",GSP
+"GTF - Great Falls, Montana, USA (United States)",GTF
+"GTR - Columbus, Mississippi, USA (United States)",GTR
+"GUA - Guatemala City, Guatemala (Guatemala)",GUA
+"GUC - Gunnison, Colorado, USA (United States)",GUC
+"GUM - Guam Island, Mariana Islands (Us Pacific Trust)",GUM
+"GVA - Geneva, Switzerland (Switzerland)",GVA
+"GYE - Guayaquil, Ecuador (Ecuador)",GYE
+"HAJ - Hannover, Germany (Germany)",HAJ
+"HAM - Hamburg, Germany (Germany)",HAM
+"HAN - Hanoi, Soc. Rep. Of Vietnam (Vietnam)",HAN
+"HDN - Steamboat Springs, Colorado, Us (United States)",HDN
+"HEL - Helsinki, Finland (Finland)",HEL
+"HGH - Hangzhou, China (China)",HGH
+"HHH - Hilton Head Island, Sc, USA (United States)",HHH
+"HIB - Chisholm/Hibbing, Minnesota, Us (United States)",HIB
+"HKD - Hakodate, Japan (Japan)",HKD
+"HKG - Hong Kong, Hong Kong (Hong Kong-China)",HKG
+"HLN - Helena, Montana, USA (United States)",HLN
+"HMO - Hermosillo, Mexico (Mexico)",HMO
+"HNL - Honolulu, Oahu, Hawaii, USA (United States)",HNL
+"HOU - Houston, Texas, USA (United States)",HOU
+"HPN - White Plains, New York, USA (United States)",HPN
+"HRB - Harbin, Manchuria, China (China)",HRB
+"HRL - Harlingen, Texas, USA (United States)",HRL
+"HSV - Huntsville/Decatur, Alabama, Us (United States)",HSV
+"HTS - Ashland,Ky/Huntington, Wv, USA (United States)",HTS
+"HUY - Humberside, England, (U.K.) (United Kingdom)",HUY
+"IAD - Washington, D.C., USA (United States)",IAD
+"IAH - Houston, Texas, USA (United States)",IAH
+"ICN - Seoul, South Korea (Korea)",ICN
+"ICT - Wichita, Kansas, USA (United States)",ICT
+"IDA - Idaho Falls, Idaho, USA (United States)",IDA
+"ILM - Wilmington, North Carolina, USA (United States)",ILM
+"IMT - Iron Mountain, Michigan, USA (United States)",IMT
+"IND - Indianapolis, Indiana, USA (United States)",IND
+"INL - International Falls, Minnesota, (United States)",INL
+"IST - Istanbul, Turkey (Turkey)",IST
+"ITH - Ithaca, New York, USA (United States)",ITH
+"JAC - Jackson, Wyoming, USA (United States)",JAC
+"JAN - Jackson/Vicksburg, Mississippi, (United States)",JAN
+"JAX - Jacksonville, Florida, USA (United States)",JAX
+"JFK - New York, New York, USA (United States)",JFK
+"JMS - Jamestown, North Dakota, USA (United States)",JMS
+"JNB - Johannesburg, South Africa (Republic Of South Africa And Transkei)",JNB
+"JNU - Juneau, Alaska, USA (United States)",JNU
+"JRB - New York, New York, USA (United States)",JRB
+"JRO - Kilimanjaro, Tanzania (Tanzania)",JRO
+"KAN - Kano, Nigeria (Nigeria)",KAN
+"KBP - Kiev, Ukraine (Ukraine)",KBP
+"KIJ - Niigata, Japan (Japan)",KIJ
+"KIN - Kingston, Jamaica (Jamaica)",KIN
+"KIX - Osaka, Japan (Japan)",KIX
+"KMG - Kunming, China (China)",KMG
+"KMQ - Komatsu, Japan (Japan)",KMQ
+"KOA - Kona, Hawaii, Hawaii, USA (United States)",KOA
+"KOJ - Kagoshima, Japan (Japan)",KOJ
+"KRK - Krakow, Poland (Poland)",KRK
+"KRS - Kristiansand, S. Norway (Norway)",KRS
+"KRT - Khartoum, Sudan (Sudan)",KRT
+"KSC - Kosice, Slovakia (Slovakia)",KSC
+"KTN - Ketchikan, Alaska, USA (United States)",KTN
+"KUL - Kuala Lumpur, Malaysia (Malaysia)",KUL
+"KWI - Kuwait, Kuwait (Kuwait)",KWI
+"LAN - Lansing, Michigan, USA (United States)",LAN
+"LAS - Las Vegas, Nevada, USA (United States)",LAS
+"LAX - Los Angeles, California, USA (United States)",LAX
+"LBA - Leeds/Bradford, England, (U.K.) (United Kingdom)",LBA
+"LBB - Lubbock, Texas, USA (United States)",LBB
+"LBE - Latrobe, Pennsylvania, USA (United States)",LBE
+"LBV - Libreville, Gabon (Gabon)",LBV
+"LCA - Larnaca, Cyprus (Cyprus)",LCA
+"LEJ - Leipzig, Germany (Germany)",LEJ
+"LEX - Lexington/Frankfort, Kentucky, (United States)",LEX
+"LFT - Lafayette, Louisiana, USA (United States)",LFT
+"LFW - Lome, Togo (Togo)",LFW
+"LGA - New York, New York, USA (United States)",LGA
+"LGB - Long Beach, California, USA (United States)",LGB
+"LGW - London, England, Uk (United Kingdom)",LGW
+"LHR - London, England, Uk (United Kingdom)",LHR
+"LIH - Lihue, Kauai, Hawaii, USA (United States)",LIH
+"LIL - Lille, France (France)",LIL
+"LIM - Lima, Peru (Peru)",LIM
+"LIR - Liberia, Costa Rica (Costa Rica)",LIR
+"LIS - Lisbon, Portugal (Portugal)",LIS
+"LIT - Little Rock, Arkansas, USA (United States)",LIT
+"LJU - Ljubljana, Slovenia (Slovenia)",LJU
+"LMM - Los Mochis, Mexico (Mexico)",LMM
+"LNK - Lincoln, Nebraska, USA (United States)",LNK
+"LOS - Lagos, Nigeria (Nigeria)",LOS
+"LRD - Laredo, Texas, USA (United States)",LRD
+"LRT - Lorient, France (France)",LRT
+"LSE - La Crosse, Wisconsin, USA (United States)",LSE
+"LUX - Luxembourg, Luxembourg (Luxembourg)",LUX
+"LWB - Greenbrier, West Virginia, USA (United States)",LWB
+"LWS - Lewiston, Idaho, USA (United States)",LWS
+"LYH - Lynchburg, Virginia, USA (United States)",LYH
+"LYS - Lyon, France (France)",LYS
+"MAD - Madrid, Spain (Spain)",MAD
+"MAF - Midland/Odessa, Texas, USA (United States)",MAF
+"MAN - Manchester, England, (U.K.) (United Kingdom)",MAN
+"MAO - Manaus, Brazil (Brazil)",MAO
+"MBJ - Montego Bay, Jamaica (Jamaica)",MBJ
+"MBS - Saginaw, Michigan, USA (United States)",MBS
+"MCI - Kansas City, Missouri, USA (United States)",MCI
+"MCO - Orlando, Florida, USA (United States)",MCO
+"MCW - Mason City, Iowa, USA (United States)",MCW
+"MDT - Harrisburg, Pennsylvania, USA (United States)",MDT
+"MDW - Chicago, Illinois, USA (United States)",MDW
+"MEI - Meridian, Mississippi, USA (United States)",MEI
+"MEM - Memphis, Tennessee, USA (United States)",MEM
+"MEX - Mexico City, Mexico (Mexico)",MEX
+"MFE - Mission/Mcallen, Texas, USA (United States)",MFE
+"MFR - Medford, Oregon, USA (United States)",MFR
+"MGA - Managua, Nicaragua (Nicaragua)",MGA
+"MGM - Montgomery, Alabama, USA (United States)",MGM
+"MHT - Manchester, New Hampshire, USA (United States)",MHT
+"MIA - Miami, Florida, USA (United States)",MIA
+"MID - Merida, Mexico (Mexico)",MID
+"MKE - Milwaukee, Wisconsin, USA (United States)",MKE
+"MKG - Muskegon, Michigan, USA (United States)",MKG
+"MLB - Melbourne, Florida, USA (United States)",MLB
+"MLH - Mulhouse, France (France)",MLH
+"MLI - Moline, Illinois, USA (United States)",MLI
+"MLU - Monroe, Louisiana, USA (United States)",MLU
+"MME - Tees-Side, England, (U.K.) (United Kingdom)",MME
+"MOB - Mobile, Alabama, USA (United States)",MOB
+"MOT - Minot, North Dakota, USA (United States)",MOT
+"MPL - Montpellier, France (France)",MPL
+"MQT - Marquette, Michigan, USA (United States)",MQT
+"MRS - Marseille, France (France)",MRS
+"MRY - Monterey, California, USA (United States)",MRY
+"MSL - Muscle Shoals, Alabama, USA (United States)",MSL
+"MSN - Madison, Wisconsin, USA (United States)",MSN
+"MSO - Missoula, Montana, USA (United States)",MSO
+"MSP - Minneapolis/St.Paul, Minnesota, (United States)",MSP
+"MSY - New Orleans, Louisiana, USA (United States)",MSY
+"MTJ - Montrose, Colorado, USA (United States)",MTJ
+"MTY - Monterrey, Mexico (Mexico)",MTY
+"MUC - Munich, Germany (Germany)",MUC
+"MXP - Milan, Italy (Italy)",MXP
+"MYR - Myrtle Beach, South Carolina, U (United States)",MYR
+"MZT - Mazatlan, Mexico (Mexico)",MZT
+"NAP - Naples, Italy (Italy)",NAP
+"NAS - Nassau, Bahamas (Bahamas)",NAS
+"NBO - Nairobi, Kenya (Kenya)",NBO
+"NCE - Nice, France (France)",NCE
+"NCL - Newcastle, England, (U.K.) (United Kingdom)",NCL
+"NDJ - N'Djamena, Chad (Chad)",NDJ
+"NGO - Nagoya, Japan (Japan)",NGO
+"NGS - Nagasaki, Japan (Japan)",NGS
+"NIM - Niamey, Niger (Niger)",NIM
+"NKC - Nouakchott, Mauritania (Mauritania)",NKC
+"NRT - Tokyo, Japan (Japan)",NRT
+"NSI - Yaounde-Nsimalen, Rep. Of Camer (Cameroons)",NSI
+"NTE - Nantes, France (France)",NTE
+"NUE - Nuremberg, Germany (Germany)",NUE
+"NWI - Norwich, England, (U.K.) (United Kingdom)",NWI
+"OAJ - Jacksonville, North Carolina, U (United States)",OAJ
+"OAK - Oakland, California, USA (United States)",OAK
+"OAX - Oaxaca, Mexico (Mexico)",OAX
+"OGG - Kahului, Maui, Hawaii, USA (United States)",OGG
+"OIT - Oita, Japan (Japan)",OIT
+"OKC - Oklahoma City, Oklahoma, USA (United States)",OKC
+"OKJ - Okayama, Japan (Japan)",OKJ
+"OMA - Omaha, Nebraska, USA (United States)",OMA
+"ONT - Ontario, California, USA (United States)",ONT
+"ORD - Chicago, Illinois, USA (United States)",ORD
+"ORF - Norfolk, Virginia, USA (United States)",ORF
+"OSL - Oslo, Norway (Norway)",OSL
+"OSR - Ostrava, Czech Republic (Czech Republic)",OSR
+"OTP - Bucharest-Otopeni, Romania (Romania)",OTP
+"OUA - Ouagadougou, Burkina Faso (Burkina Faso)",OUA
+"PAH - Paducah, Kentucky, USA (United States)",PAH
+"PAP - Port Au Prince, Haiti (Haiti)",PAP
+"PBI - West Palm Beach, Florida, USA (United States)",PBI
+"PDX - Portland, Oregon, USA (United States)",PDX
+"PFN - Panama City, Florida, USA (United States)",PFN
+"PHF - Newport News/Wmsburg, Virginia, (United States)",PHF
+"PHL - Philadelphia, Pennsylvania, USA (United States)",PHL
+"PHX - Phoenix, Arizona, USA (United States)",PHX
+"PIA - Peoria, Illinois, USA (United States)",PIA
+"PIB - Laurel/Hattiesburg,Mississippi, (United States)",PIB
+"PIH - Pocatello, Idaho, USA (United States)",PIH
+"PIR - Pierre, South Dakota, USA (United States)",PIR
+"PIT - Pittsburgh, Pennsylvania, USA (United States)",PIT
+"PLN - Pellston, Michigan, USA (United States)",PLN
+"PLS - Providenciales, B.W.I. (Turks And Caicos Islands-Uk)",PLS
+"PMO - Palermo, Italy (Italy)",PMO
+"PNS - Pensacola, Florida, USA (United States)",PNS
+"POP - Puerto Plata, Dominican Republi (Dominican Republic)",POP
+"POS - Port Of Spain, Trin. & Tob. (Trinidad And Tobago)",POS
+"PPT - Papeete, Soc. Is., Fr. Polynesi (French Polynesia)",PPT
+"PRC - Prescott, Arizona, USA (United States)",PRC
+"PRG - Prague, Czech Republic (Czech Republic)",PRG
+"PSA - Pisa, Italy (Italy)",PSA
+"PSC - Pasco, Washington, USA (United States)",PSC
+"PSP - Indio/Palm Springs, California, (United States)",PSP
+"PTY - Panama City, Panama Republic (Panama Republic)",PTY
+"PUF - Pau, France (France)",PUF
+"PUJ - Punta Cana, Dominican Republic (Dominican Republic)",PUJ
+"PUS - PUSAn, Republic Of Korea (Korea)",PUS
+"PVD - Providence, Rhode Island, USA (United States)",PVD
+"PVG - Shanghai, P.R. China (China)",PVG
+"PVR - Puerto Vallarta, Mexico (Mexico)",PVR
+"PWM - Portland, Maine, USA (United States)",PWM
+"RAK - Marrakech, Morocco (Morocco)",RAK
+"RAP - Rapid City, South Dakota, USA (United States)",RAP
+"RBA - Rabat, Morocco (Morocco)",RBA
+"RDD - Redding, California, USA (United States)",RDD
+"RDM - Redmond, Oregon, USA (United States)",RDM
+"RDU - Raleigh/Durham, North Carolina, (United States)",RDU
+"REC - Recife, Brazil (Brazil)",REC
+"REG - Reggio Calabria, Italy (Italy)",REG
+"RHI - Rhinelander, Wisconsin, USA (United States)",RHI
+"RIC - Richmond, Virginia, USA (United States)",RIC
+"RIX - Riga, Latvia (Latvia)",RIX
+"RKS - Rock Springs, Wyoming, USA (United States)",RKS
+"RNO - Reno, Nevada, USA (United States)",RNO
+"RNS - Rennes, France (France)",RNS
+"ROA - Roanoke, Virginia, USA (United States)",ROA
+"ROB - Monrovia, Liberia. (Liberia)",ROB
+"ROC - Rochester, New York, USA (United States)",ROC
+"RST - Rochester, Minnesota, USA (United States)",RST
+"RSW - Ft. Myers, Florida, USA (United States)",RSW
+"RTB - Roatan, Honduras (Honduras)",RTB
+"SAL - San Salvador, El Salvador (El Salvador)",SAL
+"SAN - San Diego, California, USA (United States)",SAN
+"SAP - San Pedro Sula, Honduras (Honduras)",SAP
+"SAT - San Antonio, Texas, USA (United States)",SAT
+"SAV - Savannah, Georgia, USA (United States)",SAV
+"SBA - Santa Barbara, California, USA (United States)",SBA
+"SBN - South Bend, Indiana, USA (United States)",SBN
+"SCE - State College, Pennsylvania, Us (United States)",SCE
+"SCL - Santiago, Chile (Chile)",SCL
+"SDF - Louisville, Kentucky, USA (United States)",SDF
+"SDQ - Santo Domingo, Dominican Republ (Dominican Republic)",SDQ
+"SEA - Seattle, Washington, USA (United States)",SEA
+"SFO - San Francisco, California, USA (United States)",SFO
+"SGF - Springfield, Missouri, USA (United States)",SGF
+"SGN - Ho Chi Minh, Soc. Rep. Of Vietn (Vietnam)",SGN
+"SGU - St. George, Utah, USA (United States)",SGU
+"SHE - Shenyang, China (China)",SHE
+"SHV - Shreveport, Louisiana, USA (United States)",SHV
+"SID - Sal Island, Cape Verde Is. (Cape Verde Islands)",SID
+"SIN - Singapore, Singapore (Singapore)",SIN
+"SIT - Sitka, Alaska, USA (United States)",SIT
+"SJC - San Jose, California, USA (United States)",SJC
+"SJD - San Jose Del Cabo, Mexico (Mexico)",SJD
+"SJO - San Jose, Costa Rica (Costa Rica)",SJO
+"SJU - San Juan, Puerto Rico (United States)",SJU
+"SKB - St. Kitts, Leeward Is. (St. Kitts)",SKB
+"SKG - Thessaloniki, Greece (Greece)",SKG
+"SLC - Salt Lake City, Utah, USA (United States)",SLC
+"SMF - Sacramento, California, USA (United States)",SMF
+"SNA - Santa Ana, California, USA (United States)",SNA
+"SNN - Shannon, Republic Of Ireland (Ireland)",SNN
+"SOF - Sofia, Bulgaria (Bulgaria)",SOF
+"SRQ - Sarasota/Bradenton, Florida, Us (United States)",SRQ
+"STC - St. Cloud, Minnesota, USA (United States)",STC
+"STI - Santiago, Dominican Republic (Dominican Republic)",STI
+"STL - St. Louis, Missouri, USA (United States)",STL
+"STR - Stuttgart, Germany (Germany)",STR
+"STS - Santa Rosa, California, USA (United States)",STS
+"STT - Charlotte Amalie, St.Thomas, Us (United States)",STT
+"STX - Christiansted, St.Croix, Usvi (United States)",STX
+"SUN - Sun Valley, Idaho, USA (United States)",SUN
+"SUX - Sioux City, Iowa, USA (United States)",SUX
+"SVG - Stavanger, Norway (Norway)",SVG
+"SVO - Moscow, Russia (Russian Federation)",SVO
+"SWF - Newburgh, New York, USA (United States)",SWF
+"SXB - Strasbourg, France (France)",SXB
+"SXM - St. Maarten, Neth. Antilles (Netherlands Antilles-Netherlands)",SXM
+"SYD - Sydney, N.S.W., Australia (Australia)",SYD
+"SYR - Syracuse, New York, USA (United States)",SYR
+"TAB - Tobago, Trinidad & Tobago (Trinidad And Tobago)",TAB
+"TBS - Tbilisi, Georgia (Georgia)",TBS
+"TGU - Tegucigalpa, Honduras (Honduras)",TGU
+"TIA - Tirana, Albania (Albania)",TIA
+"TLH - Tallahassee, Florida, USA (United States)",TLH
+"TLL - Tallinn, Estonia (Estonia)",TLL
+"TLS - Toulouse, France (France)",TLS
+"TLV - Tel Aviv-Yafo, Israel (Israel)",TLV
+"TNG - Tangier, Morocco (Morocco)",TNG
+"TOL - Toledo, Ohio, USA (United States)",TOL
+"TPA - Tampa, Florida, USA (United States)",TPA
+"TPE - Taipei, Peoples Repbulic Of China (Taiwan) (Peoples Republic Of China (Taiwan))",TPE
+"TRC - Torreon, Mexico (Mexico)",TRC
+"TRD - Trondheim, Norway (Norway)",TRD
+"TRI - Bristol, Tennessee, USA (United States)",TRI
+"TRN - Turin, Italy (Italy)",TRN
+"TRS - Trieste, Italy (Italy)",TRS
+"TSS - New York, New York, USA (United States)",TSS
+"TUL - Tulsa, Oklahoma, USA (United States)",TUL
+"TUN - Tunis, Tunisia (Tunisia)",TUN
+"TUP - Tupelo, Mississippi, USA (United States)",TUP
+"TUS - Tucson, Arizona, USA (United States)",TUS
+"TVC - Traverse City, Michigan, USA (United States)",TVC
+"TVF - Thief River Falls, Minnesota, U (United States)",TVF
+"TWF - Twin Falls, Idaho, USA (United States)",TWF
+"TXL - Berlin, Germany (Germany)",TXL
+"TYS - Knoxville, Tennessee, USA (United States)",TYS
+"UIO - Quito, Ecuador (Ecuador)",UIO
+"UVF - St. Lucia, West Indies (St. Lucia)",UVF
+"VCE - Venice, Italy (Italy)",VCE
+"VGO - Vigo, Spain (Spain)",VGO
+"VIE - Vienna, Austria (Austria)",VIE
+"VLC - Valencia, Spain (Spain)",VLC
+"VLD - Valdosta, Georgia, USA (United States)",VLD
+"VNO - Vilnius, Lithuania (Lithuania)",VNO
+"VPS - Valparaiso, Florida, USA (United States)",VPS
+"VRN - Verona, Italy (Italy)",VRN
+"VSA - Villahermosa, Mexico (Mexico)",VSA
+"WAW - Warsaw, Poland (Poland)",WAW
+"WYS - West Yellowstone, Montana, USA (United States)",WYS
+"XNA - Fayetteville, Arkansas, USA (United States)",XNA
+"YEG - Edmonton, Alta., Canada (Canada)",YEG
+"YHZ - Halifax, N.S., Canada (Canada)",YHZ
+"YKF - Kitchener, Ont., Canada (Canada)",YKF
+"YOW - Ottawa, Ontario, Canada (Canada)",YOW
+"YQB - Quebec, Que., Canada (Canada)",YQB
+"YQR - Regina, Sask., Canada (Canada)",YQR
+"YQT - Thunder Bay, Ont., Canada (Canada)",YQT
+"YUL - Montreal, Quebec, Canada (Canada)",YUL
+"YVR - Vancouver, B.C., Canada (Canada)",YVR
+"YWG - Winnipeg, Man., Canada (Canada)",YWG
+"YXC - Cranbrook, B.C., Canada (Canada)",YXC
+"YXE - Saskatoon, Sask., Canada (Canada)",YXE
+"YXU - London, Ont., Canada (Canada)",YXU
+"YYC - Calgary, Alta., Canada (Canada)",YYC
+"YYG - Charlottetown, P.E.I., Canada (Canada)",YYG
+"YYT - St. Johns, Nfld., Canada (Canada)",YYT
+"YYZ - Toronto, Ontario, Canada (Canada)",YYZ
+"ZAG - Zagreb, Croatia (Croatia)",ZAG
+"ZIH - Zihuatanejo, Mexico (Mexico)",ZIH
+"ZLO - Manzanillo, Mexico (Mexico)",ZLO
+"ZRH - Zurich, Switzerland (Switzerland)",ZRH
