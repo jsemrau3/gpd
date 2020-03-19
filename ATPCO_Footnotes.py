@@ -23,8 +23,8 @@ import dash_html_components as html
 from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
 
-#import webbrowser
-#webbrowser.open('http://127.0.0.1:8050/', new=0)
+import webbrowser
+webbrowser.open('http://127.0.0.1:8050/', new=0)
 
 # -----------------------------------------------------------------------------
 
@@ -33,10 +33,10 @@ userhome = os.path.expanduser('~')
 PPR = os.getenv('username')
 
 VALID_USERNAME_PASSWORD_PAIRS = {
-    'XDL1SEM': 'secretpassword'
+    'admin': 'password'
 }
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets = "https://raw.githubusercontent.com/jsemrau3/gpd/master/delta-stylesheet.css")
 app.title = 'Delta Footnote Submission Tool'
 auth = dash_auth.BasicAuth(
     app,
@@ -113,9 +113,7 @@ for i,j in zip(list(df_public),list(df_private)):
 for i in list(df_private):
     unpublishedTariffs.append(i)
 
-#public_keys = dict(df_public.loc['descr',:])
-#private_keys = dict(df_private.loc['descr',:])
-    
+# -----------------------------------------------------------------------------   
 app.layout = html.Div([
         #Top Bar                      
         html.Div([
@@ -149,12 +147,8 @@ app.layout = html.Div([
                                         style = {'width': '90%'}
                                     ),
                                 html.Br(),
-#                                dbc.FormText(
-#                                        "Please enter a 7-Digit ATPCO ID", color="secondary"
-#                                    )
                                 ],className = "s12 w3-col", style = {'padding-inline-start':'5%', 'padding-top':'10%', 'padding-inline-end':'5%'}
                             ),
-
                         ], className = "w3-sidebar w3-delta-blue", style = {'width': '16.66%'}
                     ),
                 #Main Container
@@ -163,7 +157,6 @@ app.layout = html.Div([
                     html.Div([
                         #Break
                         html.Br(),
-                        
                         # Top Input Container - Work in Progress
                         html.Div([
                                 # Header
@@ -191,24 +184,22 @@ app.layout = html.Div([
                                                             style = {"paddingLeft":"16px"},
                                                             value = "Public/Private"
                                                             ),
-                                                        
-                                                        
                                                         ],
                                                     ),
                                                 html.Br(),
-                                                html.Div([
-                                                        # Type of Submission
-                                                        html.H3('Type', style = {'text-decoration': 'underline'}),
-                                                        dcc.RadioItems(
-                                                            options=[
-                                                                {'label': 'New', 'value': 'New'},
-                                                                {'label': 'Change', 'value': 'Change'},
-                                                                {'label': 'Delete', 'value': 'Delete'}],
-                                                            style = {"paddingLeft":"16px"},
-                                                            value = "New"
-                                                            ),
-                                                        ]
-                                                    ),
+#                                                html.Div([
+#                                                        # Type of Submission
+#                                                        html.H3('Type', style = {'text-decoration': 'underline'}),
+#                                                        dcc.RadioItems(
+#                                                            options=[
+#                                                                {'label': 'New', 'value': 'New'},
+#                                                                {'label': 'Change', 'value': 'Change'},
+#                                                                {'label': 'Delete', 'value': 'Delete'}],
+#                                                            style = {"paddingLeft":"16px"},
+#                                                            value = "New"
+#                                                            ),
+#                                                        ]
+#                                                    ),
                                                 ], className = "l2 w3-col"
                                             ),
                                         # Middle - 83.33%
@@ -220,7 +211,6 @@ app.layout = html.Div([
                                                                 html.H3('Carrier', style = {'text-decoration': 'underline'}),
                                                                 dcc.Dropdown(
                                                                     id = 'carrier-dropdown',
-        #                                                            disabled = True,
                                                                     style = {'padding-left': '8px'},
                                                                     options = carriers,
                                                                     placeholder="Select a Carrier...",
@@ -235,7 +225,6 @@ app.layout = html.Div([
                                                                     options=[{'label': l, 'value': v} for v,l in dict(df_private.loc['descr',:]).items()],
                                                                     value = list(privateDom.keys())[0],
                                                                     placeholder="Select a Tariff...",
-        #                                                            disabled = True,
                                                                     style = {'padding-left': '8px'},
                                                                     
                                                                     )
@@ -246,7 +235,6 @@ app.layout = html.Div([
                                                                 html.H3('Footnote', style = {'text-decoration': 'underline'}),
                                                                 dcc.Dropdown(
                                                                     id = 'footnote-dropdown',
-        #                                                            disabled = True,
                                                                     style = {'padding-left': '8px'},
                                                                     placeholder="Select a Footnote...",
                                                                     
@@ -262,7 +250,6 @@ app.layout = html.Div([
                                                                 html.H3('LOC 1', style = {'text-decoration': 'underline'}),
                                                                 dcc.Dropdown(
                                                                     id = 'loc1-dropdown',
-        #                                                            disabled = True,
                                                                     )
                                                                 ], className = "s5 w3-col"
                                                             ),
@@ -271,7 +258,6 @@ app.layout = html.Div([
                                                                 html.H3('Direction', style = {'color': '#fff'}),
                                                                 dcc.Dropdown(
                                                                     id = 'directional-dropdown',
-        #                                                            disabled = True,
                                                                     options = [
                                                                             {'label': '\u21C0', 'value': '1'},
                                                                             {'label': '\u21BC', 'value': '2'},
@@ -289,7 +275,6 @@ app.layout = html.Div([
                                                                 html.H3('LOC 2', style = {'text-decoration': 'underline'}),
                                                                 dcc.Dropdown(
                                                                     id = 'loc2-dropdown',
-        #                                                            disabled = True,
                                                                     )
                                                                 ], className = "s5 w3-col" 
                                                             ),
@@ -350,20 +335,8 @@ app.layout = html.Div([
                                 
                                 # Adding Entry Button
                                 html.Div([
-                                        html.Button('Add to Submission', id='add-entry-button', className = "btn-secondary", style = {'float':'right'}),
-#                                        dbc.Modal(
-#                                                [
-#                                                    dbc.ModalHeader("WARNING"),
-#                                                    dbc.ModalBody("Please complete additional fields to proceed."),
-#                                                    dbc.ModalFooter(
-#                                                        dbc.Button(
-#                                                            "Close", id="trigger-dismiss-button", className="ml-auto"
-#                                                        )
-#                                                    ),
-#                                                ],
-#                                                id="input-warning",
-#                                                centered=True,
-#                                            ),
+                                        html.Button('Add to Submission', id='add-entry-button', className = "btn-secondary btn-lg", style = {'float':'right'}),
+#                                       
                                         ], className = "w3-container w3-padding-16"
                                     ),
                                 
@@ -776,7 +749,7 @@ def countNums(n):
     return digits
 
 @app.callback(
-        Output('output', 'style'), 
+        Output('output', 'children'), 
         [Input('confirm', 'submit_n_clicks'),
          Input('input-table', 'derived_virtual_data'),
          Input('user-input', 'value')],
@@ -911,7 +884,7 @@ def download_file(submit_n_clicks, data1, userID, data):
                     #Here we only are producing the code for the Unpublished side. Logic Remains the same.
                     publicTariffCodeCount = None
                     privateTariffCodeCount = z * (3-countNums(privateDom[tariff]['value'])) + str(privateDom[tariff]['value'])
-            print(row.Direction)
+            
             #Create List to Append to Dataframe 
             l = [None for _ in range(96)]
             
@@ -935,9 +908,7 @@ def download_file(submit_n_clicks, data1, userID, data):
                 l[83:86] = CAT
                 l[86:94] = row.TableNumber_CAT14
                 l[95:96] = row.Direction
-                conv = lambda i : i or ' ' 
-                [conv(i) for i in l] 
-                print(l)
+                l = [str(i or ' ') for i in l]
                 # Append to List
                 df_body.loc[len(df_body)] = l
                 
@@ -951,8 +922,7 @@ def download_file(submit_n_clicks, data1, userID, data):
                     l[83:86] = CAT
                     l[86:94] = row.TableNumber_CAT14
                     l[95:96] = row.Direction
-                    conv = lambda i : i or ' ' 
-                    [conv(i) for i in l] 
+                    l = [str(i or ' ') for i in l] 
                     # Append to List
                     df_body.loc[len(df_body)] = l
                 
@@ -973,8 +943,7 @@ def download_file(submit_n_clicks, data1, userID, data):
                 l[83:86] = CAT
                 l[86:94] = row.TableNumber_CAT15
                 l[95:96] = row.Direction
-                conv = lambda i : i or ' ' 
-                [conv(i) for i in l] 
+                l = [str(i or ' ') for i in l]
                 # Append to List
                 df_body.loc[len(df_body)] = l
                 
@@ -989,8 +958,7 @@ def download_file(submit_n_clicks, data1, userID, data):
                     l[83:86] = CAT
                     l[86:94] = row.TableNumber_CAT15
                     l[95:96] = row.Direction
-                    conv = lambda i : i or ' ' 
-                    [conv(i) for i in l] 
+                    l = [str(i or ' ') for i in l] 
                     # Append to List
                     df_body.loc[len(df_body)] = l
         
@@ -999,22 +967,9 @@ def download_file(submit_n_clicks, data1, userID, data):
         if os.path.exists(filepath):
             os.remove('Footnote_Rcd2.txt')
         
-#        # Attach Header at the top
-#        l = [None for _ in range(96)]
-#        rowCt = z * (5-countNums(len(df_body.index)+3)) + str(len(df_body.index)+3)
-#        a = "U DL" + "                 " + PPR + "N" + rowCt
-#        l[:len(a)] = a
-#        df_info.loc[len(df_info)] = l
-#        # Line is used for emailing user based on PPR
-#        l = [None for _ in range(96)]
-#        a = "N " + PPR + "@DELTA.COM                                                               "
-#        l[:len(a)] = a
-#        df_info.loc[len(df_info)] = l
-#        # Setting permissions and recording user
-#        l = [None for _ in range(96)]
-#        a = "W                " + PPR + "N               "
-#        l[:len(a)] = a
-#        df_info.loc[len(df_info)] = l
+        filepath = os.getcwd() + '\body.txt'
+        if os.path.exists(filepath):
+            os.remove('body.txt')
 
         a = "U DL" + "                 " + "332572" + "N" + "00003"
         b = "N " + "332572" + "@DELTA.COM                                                               "
@@ -1027,14 +982,19 @@ def download_file(submit_n_clicks, data1, userID, data):
                 filehandle.write('%s\n' % listitem)
         
         # Sort Body by Carrier, Tariff, Footnote, and then Sequence
-        df_body.sort_values(by=['CARRIER CODE','CARRIER CODE.1','CARRIER CODE.2','FARE TARIFF #', 'FARE TARIFF #.1','FARE TARIFF #.2', 'FOOTNOTE', 'FOOTNOTE.1', 'FOOTNOTE.2', 'SEQUENCE #', 'SEQUENCE #.1', 'SEQUENCE #.2' , 'SEQUENCE #.3', 'SEQUENCE #.4', 'SEQUENCE #.5', 'SEQUENCE #.6'])
-        df_body.to_csv('body.txt', index=False, header=False)
-        
-        s = open("body.txt").read()
-        s = s.replace(',,', '  ')
-        f = open("body.txt", 'w')
-        f.write(s)
-        f.close()
+        df_body_sorted = df_body.sort_values(by=['CARRIER CODE','CARRIER CODE.1','CARRIER CODE.2',
+                              'FARE TARIFF #', 'FARE TARIFF #.1','FARE TARIFF #.2', 
+                              'FOOTNOTE', 'FOOTNOTE.1', 'FOOTNOTE.2', 'SEQUENCE #', 
+                              'SEQUENCE #.1', 'SEQUENCE #.2' , 'SEQUENCE #.3', 'SEQUENCE #.4', 
+                              'SEQUENCE #.5', 'SEQUENCE #.6', 'Effective Date (0YYMMDD)',
+                              'Effective Date (0YYMMDD).1', 'Effective Date (0YYMMDD).2',
+                              'Effective Date (0YYMMDD).3', 'Effective Date (0YYMMDD).4',
+                              'Effective Date (0YYMMDD).5', 'Effective Date (0YYMMDD).6',
+                              'Discontinued Date (0YYMMDD)', 'Discontinued Date (0YYMMDD).1',
+                              'Discontinued Date (0YYMMDD).2', 'Discontinued Date (0YYMMDD).3',
+                              'Discontinued Date (0YYMMDD).4', 'Discontinued Date (0YYMMDD).5',
+                              'Discontinued Date (0YYMMDD).6'])
+        df_body_sorted.to_csv('body.txt', index=False, header=False)
         
         s = open("body.txt").read()
         s = s.replace(',', '')
@@ -1047,23 +1007,7 @@ def download_file(submit_n_clicks, data1, userID, data):
             for fname in filenames:
                 with open(fname) as infile:
                     outfile.write(infile.read())
-                        
-        # Join the Information and Body dataframes together
-#        df_upload_ready = pd.concat([df_info, df_body])                        
-        
-        # Convert the newly created dataframe to the Footnote_Rcd2 Upload File
-#        df_upload_ready.to_csv('Footnote_Rcd2.txt', index=False, header=False)
-#        s = open("Footnote_Rcd2.txt").read()
-#        s = s.replace(',,', '  ')
-#        f = open("Footnote_Rcd2.txt", 'w')
-#        f.write(s)
-#        f.close()
-#        
-#        s = open("Footnote_Rcd2.txt").read()
-#        s = s.replace(',', '')
-#        f = open("Footnote_Rcd2.txt", 'w')
-#        f.write(s)
-#        f.close()
+
         
         if os.path.exists('submission_log.csv'):
             dff.to_csv('submission_log.csv', mode='a', header=False, index=False)
@@ -1074,23 +1018,28 @@ def download_file(submit_n_clicks, data1, userID, data):
         if os.path.exists(filepath):
             os.remove('Footnote_Rcd2.zip')
         
-        # filepath = os.getcwd() + '\!XDL.GTST.XMTDLRCZ.PARCHNGS'
-        # if path.exists(filepath):
-        #     os.remove('!XDL.GTST.XMTDLRCZ.PARCHNGS')
-            
         # create a ZipFile object
         zipObj = ZipFile('Footnote_Rcd2.zip', 'w')
          
         # Add multiple files to the zip
         zipObj.write('Footnote_Rcd2.txt')
-        # zipObj.write('test_1.log')
-        # zipObj.write('test_2.log')
+
          
         # close the Zip File
         zipObj.close()
         
         os.popen('"C:/Users/332572/OneDrive - Delta Air Lines/Projects/Footnotes_Automation/Testing/WinSCP/WinSCP.exe" XDL0FT2:X16a1dl@ftpin.atpco.net /console /script="C:/Users/332572/OneDrive - Delta Air Lines/Projects/Footnotes_Automation/atpcoTest.txt" /log="C:/Users/332572/OneDrive - Delta Air Lines/Projects/Footnotes_Automation/log.txt"')
+        sent_expected = len(dff.index)
+        sent_actual = len(df_body_sorted.index)
+        print(sent_expected, sent_actual)
+        if sent_expected == sent_actual:
+            message = "All requested entries have been submitted to ATPCO!"
+        elif sent_expected > sent_actual:
+            message = sent_actual + " out of " + sent_expected + " were submitted to ATPCO! Please review entries again!"
+        elif sent_expected < sent_actual:
+            message = "Duplicate Error"
 
+        return [dbc.Modal([dbc.ModalHeader("NOTIFICATION"), dbc.ModalBody(message), dbc.ModalFooter(), ], id="input-warning", centered=True, is_open = True)]
 #Travel Restrictions Table - Add Rows Functionality
 #@app.callback(
 #    Output('input-table', 'data'),
