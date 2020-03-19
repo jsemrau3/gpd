@@ -1,0 +1,5 @@
+option batch abort
+option confirm off
+put Footnote_Rcd2.zip //!XDL.GTST.XMTDLRCZ.FTNCHNGS -resumesupport=off
+close 
+exit
