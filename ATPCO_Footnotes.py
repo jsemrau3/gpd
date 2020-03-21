@@ -1,7 +1,7 @@
 import base64
 import ast
 import io
-from datetime import datetime
+from datetime import datetime, timedelta
 import pandas as pd
 import time
 import math
@@ -23,8 +23,8 @@ import dash_html_components as html
 from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
 
-import webbrowser
-webbrowser.open('http://127.0.0.1:8050/', new=0)
+#import webbrowser
+#webbrowser.open('http://127.0.0.1:8050/', new=0)
 
 # -----------------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ VALID_USERNAME_PASSWORD_PAIRS = {
     'admin': 'password'
 }
 
-app = dash.Dash(__name__, external_stylesheets = "https://raw.githubusercontent.com/jsemrau3/gpd/master/delta-stylesheet.css")
+app = dash.Dash(__name__)
 app.title = 'Delta Footnote Submission Tool'
 auth = dash_auth.BasicAuth(
     app,
@@ -133,9 +133,9 @@ app.layout = html.Div([
                 #Left
                 html.Div([
                         dbc.FormGroup([
-                                html.H3("ATPCO ID", style = {'color':'#FFFFFF'}),
+                                dbc.Label("ATPCO ID (optional)", style = {'color':'#FFFFFF'}),
                                 dbc.Input(
-                                        placeholder='XXX1XXX...',
+#                                        placeholder='XXX1XXX...',
                                         type='text',
                                         value='',
                                         id = 'user-input',
@@ -146,6 +146,40 @@ app.layout = html.Div([
                                         minLength=7,
                                         style = {'width': '90%'}
                                     ),
+                                dbc.FormText("Provide a 7-Digit ATPCO ID"),
+                                
+                                ],className = "s12 w3-col", style = {'padding-inline-start':'5%', 'padding-top':'10%', 'padding-inline-end':'5%'}
+                            ),
+                        html.Br(),
+                        dbc.FormGroup([    
+                                dbc.Label("Work Unit Name (optional)", style = {'color':'#FFFFFF'}),
+                                dbc.Input(
+#                                        placeholder='Work Unit Name...',
+                                        type='text',
+#                                        value='',
+                                        id = 'work-unit-name',
+                                        debounce = True,
+                                        maxLength=9,
+                                        minLength=1,
+                                        style = {'width': '90%'}
+                                    ),
+                                dbc.FormText("Name your submission (9-character max)"),
+                                
+                                ],className = "s12 w3-col", style = {'padding-inline-start':'5%', 'padding-top':'10%', 'padding-inline-end':'5%'}
+                            ),
+                        html.Br(),
+                        dbc.FormGroup([
+                                dbc.Label("Description (optional)", style = {'color':'#FFFFFF'}),
+                                dbc.Textarea(
+#                                        placeholder='XXX1XXX...',
+#                                        value='',
+                                        id = 'description',
+                                        debounce = True,
+                                        maxLength=40,
+                                        minLength=1,
+                                        style = {'width': '90%'}
+                                    ),
+                                dbc.FormText("Provide a short description (40-character max)"),
                                 html.Br(),
                                 ],className = "s12 w3-col", style = {'padding-inline-start':'5%', 'padding-top':'10%', 'padding-inline-end':'5%'}
                             ),
@@ -175,7 +209,7 @@ app.layout = html.Div([
                                         html.Div([
                                                 html.Div([
                                                         # Publication Type
-                                                        html.H3('Publication', style = {'text-decoration': 'underline'}),
+                                                        html.H5('Publication'),
                                                         dcc.RadioItems(
                                                             id = 'publication',
                                                             options=[
@@ -186,20 +220,9 @@ app.layout = html.Div([
                                                             ),
                                                         ],
                                                     ),
+                                                
                                                 html.Br(),
-#                                                html.Div([
-#                                                        # Type of Submission
-#                                                        html.H3('Type', style = {'text-decoration': 'underline'}),
-#                                                        dcc.RadioItems(
-#                                                            options=[
-#                                                                {'label': 'New', 'value': 'New'},
-#                                                                {'label': 'Change', 'value': 'Change'},
-#                                                                {'label': 'Delete', 'value': 'Delete'}],
-#                                                            style = {"paddingLeft":"16px"},
-#                                                            value = "New"
-#                                                            ),
-#                                                        ]
-#                                                    ),
+                                                
                                                 ], className = "l2 w3-col"
                                             ),
                                         # Middle - 83.33%
@@ -208,54 +231,52 @@ app.layout = html.Div([
                                                 html.Div([
                                                         # Carrier
                                                         html.Div([
-                                                                html.H3('Carrier', style = {'text-decoration': 'underline'}),
+                                                                html.Label('Carrier'),
                                                                 dcc.Dropdown(
                                                                     id = 'carrier-dropdown',
-                                                                    style = {'padding-left': '8px'},
                                                                     options = carriers,
                                                                     placeholder="Select a Carrier...",
+                                                                    
                                                                     )
-                                                                ], className = "s4 w3-col"
+                                                                ], className = "s4 w3-col", style = {'padding-right': '15%'}
                                                             ),
                                                         # Tariff
                                                         html.Div([
-                                                                html.H3('Tariff', style = {'text-decoration': 'underline'}),
+                                                                html.Label('Tariff', className = "w3-left"),
                                                                 dcc.Dropdown(
                                                                     id = 'tariff-dropdown',
                                                                     options=[{'label': l, 'value': v} for v,l in dict(df_private.loc['descr',:]).items()],
                                                                     value = list(privateDom.keys())[0],
-                                                                    placeholder="Select a Tariff...",
-                                                                    style = {'padding-left': '8px'},
-                                                                    
+                                                                    placeholder="Select a Tariff..."
                                                                     )
-                                                                ], className = "s4 w3-col"
+                                                                ], className = "s4 w3-col w3-center", style = {'padding-left': '7.5%', 'padding-right': '7.5%'}
                                                             ),
                                                         # Footnote
                                                         html.Div([
-                                                                html.H3('Footnote', style = {'text-decoration': 'underline'}),
+                                                                html.Label('Footnote', className = "w3-left"),
                                                                 dcc.Dropdown(
                                                                     id = 'footnote-dropdown',
-                                                                    style = {'padding-left': '8px'},
                                                                     placeholder="Select a Footnote...",
-                                                                    
                                                                     )
-                                                                ], className = "s4 w3-col"
+                                                                ], className = "s4 w3-col w3-right", style = {'padding-left': '15%'},
                                                             )
-                                                        ]
+                                                        ], style = {'padding-bottom': '4%'}
                                                     ),
+                                                
                                                 # Loc Row - 41.66 - (3.33)10(3.33) - 41.66
                                                 html.Div([
+                                                        html.Br(),
                                                         # Loc 1
                                                         html.Div([
-                                                                html.H3('LOC 1', style = {'text-decoration': 'underline'}),
+                                                                html.Label('LOC 1'),
                                                                 dcc.Dropdown(
-                                                                    id = 'loc1-dropdown',
+                                                                    id = 'loc1-dropdown'
                                                                     )
                                                                 ], className = "s5 w3-col"
                                                             ),
                                                         # Direction
                                                         html.Div([
-                                                                html.H3('Direction', style = {'color': '#fff'}),
+                                                                html.Label('Direction', style = {'color': '#fff'}),
                                                                 dcc.Dropdown(
                                                                     id = 'directional-dropdown',
                                                                     options = [
@@ -266,56 +287,55 @@ app.layout = html.Div([
                                                                             {'label': 'N/A', 'value': ' '},
                                                                         ],
                                                                     value = ' ',
-                                                                    style = {'margin': 'auto', 'width':'90%', 'padding-left':'5%', 'padding-right':'5%'}
+                                                                    style = {'margin': 'auto', 'width':'90%', 'padding-left':'10%', 'padding-right':'10%'}
                                                                     )
                                                                 ], className = "s2 w3-col"
                                                             ),
                                                         # Loc 2
                                                         html.Div([
-                                                                html.H3('LOC 2', style = {'text-decoration': 'underline'}),
+                                                                html.Label('LOC 2'),
                                                                 dcc.Dropdown(
                                                                     id = 'loc2-dropdown',
                                                                     )
-                                                                ], className = "s5 w3-col" 
+                                                                ], className = "s5 w3-col",style = {'padding-right': '15%'},
                                                             ),
-                                                        ]
+                                                        ], style = {'padding-bottom': '4%'}
                                                     ),
+                                                html.Br(),
+                                                
+                                                
                                                 # Date Row - 26.66 - 26.66 - 26.66 - 20                
                                                 html.Div([
                                                         # Commence
                                                         html.Div([
-                                                                html.H3('Commence', style = {'text-decoration': 'underline'}),
+                                                                html.Label('Commence'),
                                                                 dcc.DatePickerSingle(
                                                                         id = 'commence-date',
-                                                                        style = {'padding-left': '8px'},
                                                                         className = "s11 w3-col",
                                                                         )
                                                                 ], className = "s3b w3-col" 
                                                             ),
                                                         html.Div([
-                                                                html.H3('Return', style = {'text-decoration': 'underline'}),
+                                                                html.Label('Return'),
                                                                 dcc.DatePickerSingle(
                                                                         id = 'return-date',
-                                                                        style = {'padding-left': '8px'},
                                                                         className = "s11 w3-col",
                                                                         )
                                                                 ], className = "s3b w3-col" 
                                                             ),
                                                         html.Div([
-                                                                html.H3('Last Ticket Date', style = {'text-decoration': 'underline'}),
+                                                                html.Label('Last Ticket Date'),
                                                                 dcc.DatePickerSingle(
                                                                         id = 'last-ticket-date',
-                                                                        style = {'padding-left': '8px'},
                                                                         className = "s11 w3-col",
                                                                         )
                                                                 ], className = "s3b w3-col" 
                                                             ),
                                                         html.Div([
-                                                                html.H3('Time', style = {'text-decoration': 'underline'}),
+                                                                html.Label('Time'),
                                                                 dbc.Input(
                                                                         placeholder='HHMM...',
                                                                         type='text',
-                                                                        value='0000',
                                                                         id = 'time-input',
                                                                         pattern = u"^([0-24]{,2}+[0-59]{,2})$",
                                                                         debounce = True,
@@ -335,8 +355,7 @@ app.layout = html.Div([
                                 
                                 # Adding Entry Button
                                 html.Div([
-                                        html.Button('Add to Submission', id='add-entry-button', className = "btn-secondary btn-lg", style = {'float':'right'}),
-#                                       
+                                        html.Button('Add to Submission', id='add-entry-button', className = "btn-primary", style = {'float':'right'}),                                      
                                         ], className = "w3-container w3-padding-16"
                                     ),
                                 
@@ -520,6 +539,7 @@ app.layout = html.Div([
                         html.Br(),
                             
                         html.Div([
+                                html.H3('Already have a file or want to match a Carrier? Import a file below!'),
                                 #Upload Field goes here
                                 dcc.Upload(
                                         id='upload-data',
@@ -578,7 +598,7 @@ def parse_contents(contents, filename):
     return df_upload.to_dict('records') 
 
 # Travel Restriction Function
-def cat14Tbl(UserID, CommAftDt, CommBefDt, RtnDt, loc1, loc2, tsi):
+def cat14Tbl(UserID, CommAftDt, CommBefDt, RtnDt, loc1, loc2, tsi, time):
     #Function includes request as well as header and payload to obtain token automatically. Each call generates a new token.
     #Header to pass into request. Ensure Content Type is set to FORM_URLENCODED (Dictated by ATPCO)
     #hdr_4tkn = {
@@ -603,7 +623,6 @@ def cat14Tbl(UserID, CommAftDt, CommBefDt, RtnDt, loc1, loc2, tsi):
     
     Authorization = "Bearer "+ token
     
-
     tvlDtCommParam = 'C'
 #    loc1 = ''
 #    loc2 = ''
@@ -612,6 +631,8 @@ def cat14Tbl(UserID, CommAftDt, CommBefDt, RtnDt, loc1, loc2, tsi):
     else:
         tsi = ""
     
+    if not time:
+        time = "0000"
     #Header to into table return request. Authorization is generated by previous request. UserID is input for record keeping. 
     #(**NOTE: ATPCO DOES TAKE USERID INTO CONSIDERATION FROM A SECURITY STANDPOINT)
     hdr = {
@@ -627,7 +648,7 @@ def cat14Tbl(UserID, CommAftDt, CommBefDt, RtnDt, loc1, loc2, tsi):
                         **({"tvlDtExp": CommBefDt} if CommBefDt else {}),
                         **({"tvlDtCommComp": RtnDt} if RtnDt else {}),
                         **({"tvlDtAppl": tvlDtCommParam} if RtnDt else {}),
-                        **({"tvlDtTm": "2400"} if RtnDt else {}),
+                        **({"tvlDtTm": time} if time else {}),
                         **({"geoSpec995": {
                             **({"type": "P"} if loc1 or loc2 else {}),
                             **({"loc1": loc1} if loc1 else {}),
@@ -752,10 +773,12 @@ def countNums(n):
         Output('output', 'children'), 
         [Input('confirm', 'submit_n_clicks'),
          Input('input-table', 'derived_virtual_data'),
-         Input('user-input', 'value')],
+         Input('user-input', 'value'),
+         Input('work-unit-name', 'value'),
+         Input('description', 'value')],
         [State('input-table', 'derived_virtual_data')]
 )
-def download_file(submit_n_clicks, data1, userID, data):
+def download_file(submit_n_clicks, data1, userID, work_unit, description, data):
     if submit_n_clicks is None:
         raise PreventUpdate
     else:
@@ -811,7 +834,7 @@ def download_file(submit_n_clicks, data1, userID, data):
         for i,d in dff.iterrows():
             #Iterate over the rows of the CAT14 Column and fill with Table Numbers using the applicable function. NOTE: The function currently has not been fed the "Commence Before/On" date
             #as this is currently disabled within the input table. It can be enabled by adding the corresponding input field within the input table and referencing it as an input for the function.
-            dff.iloc[i]['TableNumber_CAT14'] = cat14Tbl(userID, d.Commence_API, "", d.Return_API, d.LOC1, d.LOC2, d.Direction)
+            dff.iloc[i]['TableNumber_CAT14'] = cat14Tbl(userID, d.Commence_API, "", d.Return_API, d.LOC1, d.LOC2, d.Direction, d.Time)
             #Iterate over the rows of the CAT15 Column and fill with Table Numbers using the applicable function.
             dff.iloc[i]['TableNumber_CAT15'] = cat15Tbl(userID, d.LastTicket_API)
             #Hard coded time gap between for loops to prevent errors. Execution has shown to still work at down to 0.1 seconds.
@@ -895,16 +918,16 @@ def download_file(submit_n_clicks, data1, userID, data):
             #Extract Inputs from dff Tied to a Travel Restriction (CAT 14)
             if row['TableNumber_CAT14']:
                 CAT = "014"
-                
                 #Write to the list for Unpublished - CAT 14
-                
                 l[:22] = "2" + Ftn_Type + privateTariffCodeCount + row.Carrier + row.Footnote + CAT + "        "
                 l[22:29] = row.Sequence_Number
                 l[29:33] = "P" + row.LOC1 if row.LOC1 else "    "
                 l[37:41] = "P" + row.LOC2 if row.LOC2 else "    "
                 #Effective Date = Today (Domestic) or Tomorrow (International)
                 #Discontinued Date = 0999999
+                l[52:57] = "99999"
                 l[57:71] = datetime.today().strftime("0%y%m%d") + '0999999'
+                l[79:82] = "001"
                 l[83:86] = CAT
                 l[86:94] = row.TableNumber_CAT14
                 l[95:96] = row.Direction
@@ -916,9 +939,11 @@ def download_file(submit_n_clicks, data1, userID, data):
                     #Write to the list for Published - CAT 14
                     l[:22] = "2" + Ftn_Type + publicTariffCodeCount + row.Carrier + row.Footnote + CAT + "        "
                     l[22:29] = row.Sequence_Number
-                    l[29:33] = "P" + row.LOC1 if row.LOC1 else "    "
-                    l[37:41] = "P" + row.LOC2 if row.LOC2 else "    "
+                    l[29:33] = " " + row.LOC1 if row.LOC1 else "    "
+                    l[37:41] = " " + row.LOC2 if row.LOC2 else "    "
+                    l[52:57] = "99999"
                     l[57:71] = datetime.today().strftime("0%y%m%d") + '0999999'
+                    l[79:82] = "001"
                     l[83:86] = CAT
                     l[86:94] = row.TableNumber_CAT14
                     l[95:96] = row.Direction
@@ -930,16 +955,15 @@ def download_file(submit_n_clicks, data1, userID, data):
                 
             #Extract Inputs from dff Tied to a Sales Restriction (CAT 15)
             if row['TableNumber_CAT15']:
-#                CarrierCode = "0DL"
-#                Footnote = row['Footnote']
                 CAT = "015"
-                
                 # Write to the list for Unpublished - CAT 15
                 l[:22] = "2" + Ftn_Type + privateTariffCodeCount + row.Carrier + row.Footnote + CAT + "        "
                 l[22:29] = row.Sequence_Number
                 l[29:33] = "P" + row.LOC1 if row.LOC1 else "    "
                 l[37:41] = "P" + row.LOC2 if row.LOC2 else "    "
+                l[52:57] = "99999"
                 l[57:71] = datetime.today().strftime("0%y%m%d") + '0999999'
+                l[79:82] = "001"
                 l[83:86] = CAT
                 l[86:94] = row.TableNumber_CAT15
                 l[95:96] = row.Direction
@@ -947,14 +971,15 @@ def download_file(submit_n_clicks, data1, userID, data):
                 # Append to List
                 df_body.loc[len(df_body)] = l
                 
-                
                 if publicTariffCodeCount:
                     # Write to the list for Published - CAT 15
                     l[:22] = "2" + b + publicTariffCodeCount + row.Carrier + row.Footnote + CAT + "        "
                     l[22:29] = row.Sequence_Number
                     l[29:33] = "P" + row.LOC1 if row.LOC1 else "    "
                     l[37:41] = "P" + row.LOC2 if row.LOC2 else "    "
+                    l[52:57] = "99999"
                     l[57:71] = datetime.today().strftime("0%y%m%d") + '0999999'
+                    l[79:82] = "001"
                     l[83:86] = CAT
                     l[86:94] = row.TableNumber_CAT15
                     l[95:96] = row.Direction
@@ -970,10 +995,23 @@ def download_file(submit_n_clicks, data1, userID, data):
         filepath = os.getcwd() + '\body.txt'
         if os.path.exists(filepath):
             os.remove('body.txt')
-
-        a = "U DL" + "                 " + "332572" + "N" + "00003"
+        
+        # Header Record
+        a = "U" + " " + "DL " + 16*" " + "332572" + "N" + "00003"
+        
+        # Notification
         b = "N " + "332572" + "@DELTA.COM                                                               "
-        c = "W                " + "332572" + "N               "
+        
+        #Records
+        subtime = datetime.now()
+        if subtime.minute < 30:
+            extratime = 1
+        else:
+            extratime = 0
+        
+        subtime = subtime.replace(second=0, microsecond=0, minute=0, hour=subtime.hour+extratime) + timedelta(hours=subtime.minute//30)
+        subtime = subtime.strftime("%H%M")
+        c = "W                " + work_unit + (9-len(work_unit))*" " + "    " + "Y" + datetime.today().strftime("%y%m%d") + subtime + " " + description + (40-len(description))*" "
         
         header = [a, b, c]
 
@@ -1007,7 +1045,14 @@ def download_file(submit_n_clicks, data1, userID, data):
             for fname in filenames:
                 with open(fname) as infile:
                     outfile.write(infile.read())
-
+        
+        filepath = os.getcwd() + '\header.txt'
+        if os.path.exists(filepath):
+            os.remove('header.txt')
+        
+        filepath = os.getcwd() + '\body.txt'
+        if os.path.exists(filepath):
+            os.remove('body.txt')
         
         if os.path.exists('submission_log.csv'):
             dff.to_csv('submission_log.csv', mode='a', header=False, index=False)
@@ -1017,39 +1062,31 @@ def download_file(submit_n_clicks, data1, userID, data):
         filepath = os.getcwd() + '\Footnote_Rcd2.zip'
         if os.path.exists(filepath):
             os.remove('Footnote_Rcd2.zip')
-        
+
         # create a ZipFile object
         zipObj = ZipFile('Footnote_Rcd2.zip', 'w')
          
         # Add multiple files to the zip
         zipObj.write('Footnote_Rcd2.txt')
 
-         
         # close the Zip File
         zipObj.close()
         
-        os.popen('"C:/Users/332572/OneDrive - Delta Air Lines/Projects/Footnotes_Automation/Testing/WinSCP/WinSCP.exe" XDL0FT2:X16a1dl@ftpin.atpco.net /console /script="C:/Users/332572/OneDrive - Delta Air Lines/Projects/Footnotes_Automation/atpcoTest.txt" /log="C:/Users/332572/OneDrive - Delta Air Lines/Projects/Footnotes_Automation/log.txt"')
-        sent_expected = len(dff.index)
-        sent_actual = len(df_body_sorted.index)
-        print(sent_expected, sent_actual)
-        if sent_expected == sent_actual:
-            message = "All requested entries have been submitted to ATPCO!"
-        elif sent_expected > sent_actual:
-            message = sent_actual + " out of " + sent_expected + " were submitted to ATPCO! Please review entries again!"
-        elif sent_expected < sent_actual:
-            message = "Duplicate Error"
-
-        return [dbc.Modal([dbc.ModalHeader("NOTIFICATION"), dbc.ModalBody(message), dbc.ModalFooter(), ], id="input-warning", centered=True, is_open = True)]
-#Travel Restrictions Table - Add Rows Functionality
-#@app.callback(
-#    Output('input-table', 'data'),
-##    [Input('upload-data', 'contents'),Input('upload-data', 'filename'),
-#     [Input('add-travel-restriction-button', 'n_clicks')],
-#    [State('input-table', 'data'), State('input-table', 'columns')])
-#def add_TravelRestr_row(n_clicks, rows, columns):
-#    if n_clicks > 0:
-#        rows.append({c['id']: '' for c in columns})
-#    return rows
+        script = os.getcwd() + "\\atpcoTest.txt"
+        log = os.getcwd() + "\\log.txt"
+        commandpath = "'" + '"/WinSCP/WinSCP.exe" XDL0FT2:X16a1dl@ftpin.atpco.net /console /script=' + script + ' /log=' + log + "'"
+        os.popen(commandpath)
+#        sent_expected = len(dff.index)
+#        sent_actual = len(df_body_sorted.index)
+#        print(sent_expected, sent_actual)
+#        if sent_expected == sent_actual:
+#            message = "All requested entries have been submitted to ATPCO!"
+#        elif sent_expected > sent_actual:
+#            message = sent_actual + " out of " + sent_expected + " were submitted to ATPCO! Please review entries again!"
+#        elif sent_expected < sent_actual:
+#            message = "Duplicate Error"
+#
+#        return [dbc.Modal([dbc.ModalHeader("NOTIFICATION"), dbc.ModalBody(message), dbc.ModalFooter(), ], id="input-warning", centered=True, is_open = True)]
 
 @app.callback(
         Output('input-table', 'data'),
@@ -1099,7 +1136,6 @@ def add_Entry(n_clicks, carrier, publication, tariff, footnote, loc1, direc, loc
                    'LastTicket_Date':lastD_string,
                    'Time':time})
     return rows
-    
 
 @app.callback(
         Output('tariff-dropdown','options'),
@@ -1143,29 +1179,6 @@ def update_options2(search_value):
     if not search_value:
         raise PreventUpdate
     return [o for o in airports_dict if search_value.lower() in o["label"].lower()]
-
-#@app.callback(
-#        Output("input-warning", "is_open"),
-#        [Input("add-entry-button", "n_clicks"),
-#         Input("trigger-dismiss-button", "n_clicks"),
-#         Input('carrier-dropdown', 'value'),
-#         Input('publication', 'value'),
-#         Input('tariff-dropdown', 'value'),
-#         Input('footnote-dropdown', 'value'),
-#         Input('loc1-dropdown', 'value'),
-#         Input('directional-dropdown', 'value'),
-#         Input('loc2-dropdown', 'value'),
-#         Input('commence-date', 'date'),
-#         Input('return-date', 'date'),
-#         Input('last-ticket-date', 'date'),
-#         Input('time-input', 'value'),],
-#        [State("input-warning", "is_open")]
-#        )
-#
-#def trigger_warning(n1, n2, carrier, publication, tariff, footnote, loc1, direction, loc2, commenceD, returnD, lastD, time, is_open):
-#    if n1 or n2 and carrier=='' and publication=='' and tariff=='' and footnote=='' or commenceD is None or returnD is None or lastD is None:
-#        return not is_open
-#    return is_open
 
 if __name__ == '__main__':
     app.run_server(debug=False)
